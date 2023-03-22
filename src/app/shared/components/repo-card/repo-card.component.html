@@ -1,0 +1,7 @@
+<div class="card  col-lg-12">
+    <h4>{{repoDetails.name}}</h4>
+    <small class="description">{{repoDetails.description}}</small>
+    <span *ngIf="repoDetails.topics.length" class="mt-2 d-flex slide">
+      <span *ngFor="let topic of repoDetails?.topics" class="topic badge  mr-1 p-1 my-1">{{topic}}</span>    
+    </span>
+  </div>

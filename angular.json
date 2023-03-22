@@ -12,7 +12,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "fyle",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -31,11 +31,12 @@
             ],
             "styles": [
               "src/styles.scss",
-              "src/assets/styles/theme.css",
-              
+              "src/assets/styles/grid.css",
+              "src/assets/styles/grid.css",
               "node_modules/primeng/resources/primeng.min.css",
               "node_modules/primeflex/primeflex.css",
-              "node_modules/primeicons/primeicons.css"
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/md-light-deeppurple/theme.css"
             ],
             "scripts": []
           },
@@ -100,10 +101,15 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "codeCoverage": true
           }
+          
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "d25bc1b9-ab80-4899-b0ec-578560de99a9"
   }
 }
