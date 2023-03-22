@@ -1,5 +1,5 @@
 #### A simple Angular app for displaying the github user profile and its repositories based on the username provided.
-Hosted version of this application can be found here: https://github-repo-dtls.netlify.app/ 
+Hosted version of this application can be found here: https://flourishing-sawine-3b137d.netlify.app/ 
 ##### 1. Running the project
 `ng serve` this will run the project on `localhost:4200`. make sure angualar cli and nodejs is installed on your system.
 ##### 2. Running the Unit test
