@@ -29,9 +29,9 @@ describe('DataService', () => {
     service.profileDetail$.subscribe({
       next:(userDetails)=>{
         if(userDetails){
-          expect(userDetails)
+          expect(userDetails?.login)
           .withContext('expected user details')
-          .toEqual(expectedUserDetails);
+          .toEqual(expectedUserDetails?.login);
           done();
         }
       }

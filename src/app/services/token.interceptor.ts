@@ -6,7 +6,8 @@ import { map, filter } from 'rxjs/operators';
 @Injectable()
 export class HeaderInterceptor implements HttpInterceptor {
   intercept(httpRequest: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const API_KEY = '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';
-    return next.handle(httpRequest.clone({ setHeaders: { Authorization: `Bearer ${API_KEY}` } }));
+    // const API_KEY = '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';
+    // { setHeaders: { Authorization: `Bearer ${API_KEY}` }
+    return next.handle(httpRequest.clone());
   }
 }
