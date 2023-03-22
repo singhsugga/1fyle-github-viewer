@@ -15,7 +15,7 @@ To get the code coverage report use `ng test --code-coverage`
 ### Error and Edge cases
 1. Error screen will show up witha error image/message and possible actions.
 ![Error](./readme/error.png?raw=true "Error Screen")
-2. 
+2. If user frequently changes the page, before a http call is completd the previous request will get cancelled to prevent any race condition.
 
 
 
