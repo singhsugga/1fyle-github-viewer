@@ -79,8 +79,9 @@ export class ProfileDetailsComponent implements OnInit,OnDestroy {
    * Gets repo associated with profile
    * @param [pageNumber]
    */
-  getProfileRepo(pageNumber: number = 1) {
-    this.dataService.fetchAssociatedRepo(pageNumber, this.githubUsername);
+  getProfileRepo(pageDetails:any) {
+    console.log(pageDetails)
+    this.dataService.fetchAssociatedRepo(pageDetails?.page + 1, this.githubUsername,pageDetails.rows);
   }
 
   ngOnDestroy(){

@@ -95,11 +95,11 @@ export class DataService {
    * @param [pageNumber]
    * @param userName
    */
-  fetchAssociatedRepo(pageNumber: number = 1, userName: string) {
+  fetchAssociatedRepo(pageNumber: number = 1, userName: string,perPage = this.initialPagination.perPage) {
     this.fetchReposSubscription ? this.fetchReposSubscription.unsubscribe() :null;
     this.setLoadingState('REPO', 'LOADING');
     let params = new HttpParams();
-    params = params.append('per_page', this.initialPagination.perPage);
+    params = params.append('per_page', perPage);
     params = params.append('page', pageNumber);
     this.fetchReposSubscription = this.http
       .get(environment.BASE_ENDPOINT + `users/${userName}/repos`, { params })
