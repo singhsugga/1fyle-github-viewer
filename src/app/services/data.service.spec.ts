@@ -33,9 +33,9 @@ describe('DataService', () => {
     const sub1 = service.profileDetail$.subscribe({
       next:(userDetails)=>{
         if(userDetails){
-          expect(userDetails?.login)
+          expect(userDetails)
           .withContext('expected user details')
-          .toEqual(expectedUserDetails?.login);
+          .toEqual(expectedUserDetails);
           done();
         }
       },
