@@ -26,9 +26,7 @@ describe('DataService', () => {
   it('should set profile details', (done: DoneFn) => {
     const expectedUserDetails:any =  userDetails;
     service.fetchProfileDetails('freeCodeCamp');
-    const req = httpMock.expectOne('https://api.github.com/users/freeCodeCamp');
-    expect(req.request.method === 'GET');
-    req.flush(expectedUserDetails);
+    
 
     const sub1 = service.profileDetail$.subscribe({
       next:(userDetails)=>{
@@ -43,7 +41,9 @@ describe('DataService', () => {
         fail('Error Occured')
       }
     }) 
-
+    const req = httpMock.expectOne('https://api.github.com/users/freeCodeCamp');
+    expect(req.request.method === 'GET');
+    req.flush(expectedUserDetails);
     sub1.unsubscribe();
     
   });
